@@ -1,7 +1,7 @@
 anotherTry
 ==========
 
-Random bits of code put together to emulate [iTried(Mac)](https://itunes.apple.com/us/app/itried/id407519315?mt=12) on windows.
+Random bits of code put together to simulate [iTried(Mac)](https://itunes.apple.com/us/app/itried/id407519315?mt=12) on windows.
 
 Run the following command first if you want to use event logging.
 
