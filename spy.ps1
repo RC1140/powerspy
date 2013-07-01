@@ -1,11 +1,11 @@
 $oldFound = $False;
 while(1){
- $found = Get-Process| where { $_.processname.contains(".scr") }
- if($oldFound -and !$found)
+ $scActive = Get-CimInstance win32_desktop | where name -eq (whoami)
+ if(!$scActive.ScreenSaveActive)
  {
     write-eventlog -logname Application -source ScreenSaverWatcher -eventID 1337 -message "The screensaver has been stopped , logging event and taking screenshot";
     .\CommandCam.exe
+    break
  }
- $oldFound = $found;
  sleep 1
 }
